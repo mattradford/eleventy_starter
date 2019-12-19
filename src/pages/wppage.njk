@@ -1,0 +1,9 @@
+---
+pagination:
+    data: wppages
+    size: 1
+    alias: wppage
+permalink: wppage/{{ wppage.title | slug }}/index.html
+---
+
+{% extends "layouts/wppage.njk" %}

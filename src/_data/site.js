@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Title of the site",
+  title: "Totaljobs",
   description: "Description of the site for SEO",
   url: "https://webstoemp.com",
   metaImage: "https://webstoemp.com/assets/img/socialmedia.jpg",

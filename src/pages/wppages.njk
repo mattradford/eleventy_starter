@@ -1,17 +1,17 @@
 ---
-permalink: films.html
+permalink: wppages.html
 ---
 {% extends "layouts/base.njk" %}
 
-{% set metaTitle = "Films" %}
+{% set metaTitle = "WP Pages" %}
 {% set metaDescription = "This is an SEO description for this page" %}
 {% set metaImage = site.metaImage %}
 
 {% block content %}
-  <p>Star Wars films returned from Star Wars API:</p>
+  <p>The list of WP pages:</p>
   <ul>
-  {% for film in films %}
-  <li><a href="films/{{ film.title | slug}}">{{ film.title }}</a></li>
+   {% for wppage in wppages %}
+  <li><a href="wppage/{{ wppage.slug}}">{{ wppage.title }}</a></li>
   {% endfor %}
   </ul>
 {% endblock %}
