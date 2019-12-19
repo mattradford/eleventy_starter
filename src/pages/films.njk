@@ -1,0 +1,16 @@
+---
+permalink: films.html
+---
+{% extends "layouts/base.njk" %}
+
+{% set metaTitle = "Films" %}
+{% set metaDescription = "This is an SEO description for this page" %}
+{% set metaImage = site.metaImage %}
+
+{% block content %}
+  <ul>
+  {% for film in films %}
+  <li><a href="films/{{ film.title | slug}}">{{ film.title }}</a></li>
+  {% endfor %}
+  </ul>
+{% endblock %}

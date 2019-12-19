@@ -1,0 +1,9 @@
+---
+pagination:
+    data: films
+    size: 1
+    alias: film
+permalink: films/{{ film.title | slug }}/index.html
+---
+
+{% extends "layouts/film.njk" %}
