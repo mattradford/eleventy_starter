@@ -6,28 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ wppage.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ metaDescription if metaDescription else site.description }}">
-
-  <!-- Open Graph + Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:creator" content="{{ site.authorTwitter }}">
-  <meta property="og:url" content="{{ site.url }}">
-  <meta property="og:title" content="{{ metaTitle ~ ' - ' if metaTitle }}{{ site.title }}">
-  <meta property="og:description" content="{{ metaDescription if metaDescription else site.description }}">
-  <meta property="og:image" content="{{ metaImage if metaImage else site.metaImage }}">
-
-  <!-- Apple icon (minimal) -->
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/main.min.css?ref={{ site.buildDate | date('X') }}">
+  <!-- ContentService CSS Framework -->
+  {{ contentServiceCssFramework | safe }}
+  <!-- ContentService CSS Framework end -->
+  <!-- ContentService CSS -->
+  {{ contentServiceCss | safe }}
+  <!-- ContentService CSS end -->
+  <!-- ContentService JS -->
+  {{ contentServiceJs | safe }}
+  <!-- ContentService JS end -->
 </head>
 <body>
-  <!-- ContentService API data -->
-  {{ headerContent }}
-  <!-- end ContentService API data -->
+  <!-- ContentService Header HTML -->
+  {{ contentServiceHeaderHtml | safe }}
+  <!-- ContentService Header HTML ends -->
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-12 col-md-8">
   <h1>{{ wppage.title }} </h1>
   {{ wppage.body | safe}}
-  {% include "partials/footer.njk" %}
-  <script src="/assets/js/bundle.min.js?ref={{ site.buildDate | date('X') }}"></script>
+  </div>
+  </div>
+  </div>
+
+  <!-- ContentService Footer HTML -->
+  {{ contentServiceFooterHtml | safe }}
+  <!-- ContentService Footer HTML ends -->
 </body>
 </html>

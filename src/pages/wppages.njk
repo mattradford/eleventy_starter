@@ -11,7 +11,7 @@ permalink: wppages.html
   <p>The list of WP pages:</p>
   <ul>
    {% for wppage in wppages %}
-  <li><a href="wppage/{{ wppage.slug}}">{{ wppage.title }}</a></li>
+  <li><a href="wppage/{{ wppage.slug}}/index.html">{{ wppage.title }}</a></li>
   {% endfor %}
   </ul>
 {% endblock %}
