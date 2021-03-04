@@ -2,6 +2,8 @@ name: auto-merge
 
 on:
   pull_request:
+  schedule:
+    - cron: '*/5 * * * *'  # every day at midnight
 
 jobs:
   auto-merge:
